@@ -3,7 +3,8 @@
         "/project/adc.v",
         "/project/dac.v",
         "/project/clkdiv32.v",
-        "/project/audiothrough.v"
+        "/project/audiothrough.v",
+        "/project/biquad_filter.v"
     ],
     "custom_verilog_modules": [
         {
@@ -64,6 +65,69 @@
                     "direction": "output",
                     "type": "csr",
                     "width": 10
+                },
+
+                {
+                    "name": "x0",
+                    "direction": "input",
+                    "type": "csr",
+                    "width": 17
+                },
+                {
+                    "name": "x1",
+                    "direction": "input",
+                    "type": "csr",
+                    "width": 17
+                },
+                {
+                    "name": "x2",
+                    "direction": "input",
+                    "type": "csr",
+                    "width": 17
+                },
+                {
+                    "name": "y1",
+                    "direction": "input",
+                    "type": "csr",
+                    "width": 17
+                },
+                {
+                    "name": "y2",
+                    "direction": "input",
+                    "type": "csr",
+                    "width": 17
+                },
+
+                
+                {
+                    "name": "x0_neg",
+                    "direction": "input",
+                    "type": "csr",
+                    "width": 1
+                }, 
+                {
+                    "name": "x1_neg",
+                    "direction": "input",
+                    "type": "csr",
+                    "width": 1
+                }, 
+                {
+                    "name": "x2_neg",
+                    "direction": "input",
+                    "type": "csr",
+                    "width": 1
+                }, 
+                {
+                    "name": "y1_neg",
+                    "direction": "input",
+                    "type": "csr",
+                    "width": 1
+                }, 
+                {
+                    "name": "y2_neg",
+                    "direction": "input",
+                    "type": "csr",
+                    "width": 1
                 }
             ]
         }
