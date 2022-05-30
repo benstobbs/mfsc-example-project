@@ -13,5 +13,11 @@ int main(void) {
 	uart_init();
 
 	printf("Hello World!");
+
+	while(1){
+		int data = audiothrough_0_data_out_read();
+		printf("Data: %d \n", data);
+	}
+
 	return 0;
 }

@@ -1,3 +1,71 @@
 {
-    
+    "custom_verilog_files": [
+        "/project/adc.v",
+        "/project/dac.v",
+        "/project/clkdiv32.v",
+        "/project/audiothrough.v"
+    ],
+    "custom_verilog_modules": [
+        {
+            "module": "audiothrough",
+            "io": [
+                {
+                    "name": "clk",
+                    "type": "clock"
+                },
+
+                {
+                    "name": "adc_cs",
+                    "direction": "output",
+                    "type": "gpio",
+                    "pin": "6"
+                },
+                {
+                    "name": "adc_clk",
+                    "direction": "output",
+                    "type": "gpio",
+                    "pin": "11"
+                },
+                {
+                    "name": "adc_din",
+                    "direction": "output",
+                    "type": "gpio",
+                    "pin": "9"
+                },
+                {
+                    "name": "adc_dout",
+                    "direction": "input",
+                    "type": "gpio",
+                    "pin": "10"
+                },
+
+                
+                {
+                    "name": "dac_cs",
+                    "direction": "output",
+                    "type": "gpio",
+                    "pin": "MISO"
+                },
+                {
+                    "name": "dac_clk",
+                    "direction": "output",
+                    "type": "gpio",
+                    "pin": "0"
+                },
+                {
+                    "name": "dac_sdi",
+                    "direction": "output",
+                    "type": "gpio",
+                    "pin": "1"
+                },
+
+                {
+                    "name": "data_out",
+                    "direction": "output",
+                    "type": "csr",
+                    "width": 10
+                }
+            ]
+        }
+    ]
 }

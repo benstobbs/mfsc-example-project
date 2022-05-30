@@ -13,7 +13,7 @@ module adc(
 input clk;
 input start;
 output done;
-output reg [9:0] dout = 9'b0;
+output reg [9:0] dout;
 
 output adc_cs;
 output adc_clk;
@@ -48,8 +48,8 @@ always @ (state)
     endcase
 
 // Process input: ADC_DOUT
-always @ (state)
+always @ (negedge clk)
     if (state >= 6'd7 && state <= 6'd16)
-        dout[6'd16 - state] <= adc_din;
+        dout[6'd16 - state] <= adc_dout;
 
 endmodule
